@@ -1,0 +1,204 @@
+:root {
+  --redFlix: #e50914;
+  --blackBg: #141414;
+  --greylink: #aaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--blackBg);
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-logo {
+  color: var(--redFlix);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3rem;
+}
+
+.header-nav-link {
+  text-decoration: none;
+  color: var(--greylink);
+  margin-right: 1rem;
+  font-family: sans-serif;
+  transition: 0.5s ease all;
+}
+
+.header-nav-link:hover {
+  color: #fff;
+}
+
+/*main movie*/
+.main-movie {
+  max-width: 90%;
+  margin: auto;
+  background-image: linear-gradient(
+      to left,
+      rgba(20, 20, 20, 1) 40%,
+      rgba(20, 20, 20, 0)
+    ),
+    url("/img/geralt.jpg");
+  height: 60vh;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.main-movie .container {
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 0.5rem;
+  height: 100%;
+}
+
+.main-movie-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-movie-info-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: "Bebas Neue", cursive;
+}
+
+/* buttons */
+.button {
+  margin-top: 5rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: 0.5s ease all;
+  margin-right: 1rem;
+}
+
+.button i {
+  margin-right: 0.4rem;
+}
+
+.button__primary {
+  background: linear-gradient(
+    rgba(229, 9, 20, 0.5),
+    rgba(229, 9, 20, 0.5) 100%
+  );
+}
+
+.button__primary:hover {
+  background-color: var(--redFlix);
+  cursor: pointer;
+}
+
+.button__outlined {
+  background-color: rgba(53, 49, 49, 0.4);
+  border: 1px solid rgba(229, 9, 20, 0.5);
+}
+
+.button__outlined:hover {
+  background-color: rgba(53, 49, 49, 0.8);
+  border: 1px solid rgba(229, 9, 20, 1);
+}
+
+/*carrousel*/
+.carrousel {
+  max-width: 90%;
+  margin: auto;
+}
+
+.carrousel-film {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  max-width: 15rem;
+}
+
+@media screen and (max-width: 700px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+  }
+
+  .main-movie {
+    max-width: 95%;
+    margin: auto;
+    background-image: linear-gradient(
+        to left,
+        rgba(20, 20, 20, 1),
+        rgba(20, 20, 20, 0) 100%
+      ),
+      url("/img/geralt.jpg");
+    height: 60vh;
+    background-size: cover;
+    border-radius: 1rem;
+  }
+
+  .main-movie .container {
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0.5rem;
+    height: 100%;
+  }
+
+  .main-movie-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-movie-info-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-family: "Bebas Neue", cursive;
+  }
+
+  .button {
+    margin-top: 1rem;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    font-size: 0.85rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    transition: 0.5s ease all;
+    margin-right: 0.5rem;
+  }
+
+  .carrousel {
+    max-width: 95%;
+    margin: auto;
+  }
+}
